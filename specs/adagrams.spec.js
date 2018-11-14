@@ -11,6 +11,7 @@ describe('Adagrams', () => {
     it('returns an array, and each item is a single-letter string', () => {
       const drawn = Adagrams.drawLetters();
 
+
       expect(Array.isArray(drawn)).toBe(true);
       drawn.forEach((l) => {
         expect(l).toMatch(/^[A-Z]$/);
