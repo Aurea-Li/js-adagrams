@@ -39,16 +39,17 @@ drawLetters() {
       hand.push(pool.splice(index, 1)[0]);
     }
 
-    console.log(hand);
     return hand;
   },
 
   usesAvailableLetters(input, lettersInHand) {
     for(const letter of input) {
+
       const index = lettersInHand.indexOf(letter);
 
       if (index > -1) {
-        lettersInHand = lettersInHand.splice(index, 1);
+        lettersInHand.splice(index, 1);
+
       } else {
         return false;
       }
@@ -131,8 +132,11 @@ drawLetters() {
 
 };
 
-
-// console.log(Adagrams.drawLetters());
+// const drawn = ['D', 'O', 'G', 'X', 'X', 'X', 'X', 'X', 'X', 'X'];
+// const word = 'DOG';
+//
+// const isValid = Adagrams.usesAvailableLetters(word, drawn);
+// console.log(isValid);
 
 // Do not remove this line or your tests will break!
 export default Adagrams;
